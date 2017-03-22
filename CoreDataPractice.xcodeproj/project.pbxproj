@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		201959E61E82BD2500384818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201959E51E82BD2500384818 /* AppDelegate.swift */; };
-		201959E81E82BD2500384818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201959E71E82BD2500384818 /* ViewController.swift */; };
+		201959E81E82BD2500384818 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201959E71E82BD2500384818 /* MainVC.swift */; };
 		201959EB1E82BD2500384818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201959E91E82BD2500384818 /* Main.storyboard */; };
 		201959EE1E82BD2500384818 /* CoreDataPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 201959EC1E82BD2500384818 /* CoreDataPractice.xcdatamodeld */; };
 		201959F01E82BD2500384818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201959EF1E82BD2500384818 /* Assets.xcassets */; };
 		201959F31E82BD2500384818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201959F11E82BD2500384818 /* LaunchScreen.storyboard */; };
+		20195A1E1E82C85900384818 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A1D1E82C85900384818 /* MaterialView.swift */; };
+		20195A201E82CA1800384818 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A1F1E82CA1800384818 /* ItemCell.swift */; };
+		20195A421E82D92100384818 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3A1E82D92100384818 /* Image+CoreDataClass.swift */; };
+		20195A431E82D92100384818 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3B1E82D92100384818 /* Image+CoreDataProperties.swift */; };
+		20195A441E82D92100384818 /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3C1E82D92100384818 /* Store+CoreDataClass.swift */; };
+		20195A451E82D92100384818 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3D1E82D92100384818 /* Store+CoreDataProperties.swift */; };
+		20195A461E82D92100384818 /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3E1E82D92100384818 /* ItemType+CoreDataClass.swift */; };
+		20195A471E82D92100384818 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A3F1E82D92100384818 /* ItemType+CoreDataProperties.swift */; };
+		20195A481E82D92100384818 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A401E82D92100384818 /* Item+CoreDataClass.swift */; };
+		20195A491E82D92100384818 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A411E82D92100384818 /* Item+CoreDataProperties.swift */; };
+		20195A4C1E82DCC500384818 /* ItemDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A4B1E82DCC500384818 /* ItemDetailsVC.swift */; };
+		20195A4F1E82DF6000384818 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20195A4E1E82DF6000384818 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		201959E21E82BD2500384818 /* CoreDataPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		201959E51E82BD2500384818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		201959E71E82BD2500384818 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		201959E71E82BD2500384818 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		201959EA1E82BD2500384818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		201959ED1E82BD2500384818 /* CoreDataPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPractice.xcdatamodel; sourceTree = "<group>"; };
 		201959EF1E82BD2500384818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201959F21E82BD2500384818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		201959F41E82BD2500384818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20195A1D1E82C85900384818 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		20195A1F1E82CA1800384818 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		20195A3A1E82D92100384818 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20195A3B1E82D92100384818 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20195A3C1E82D92100384818 /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20195A3D1E82D92100384818 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20195A3E1E82D92100384818 /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20195A3F1E82D92100384818 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20195A401E82D92100384818 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20195A411E82D92100384818 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20195A4B1E82DCC500384818 /* ItemDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsVC.swift; sourceTree = "<group>"; };
+		20195A4E1E82DF6000384818 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +80,10 @@
 		201959E41E82BD2500384818 /* CoreDataPractice */ = {
 			isa = PBXGroup;
 			children = (
+				20195A4A1E82DCA900384818 /* Controller */,
+				20195A251E82D69E00384818 /* Model */,
+				20195A1C1E82C83A00384818 /* View */,
 				201959E51E82BD2500384818 /* AppDelegate.swift */,
-				201959E71E82BD2500384818 /* ViewController.swift */,
 				201959E91E82BD2500384818 /* Main.storyboard */,
 				201959EF1E82BD2500384818 /* Assets.xcassets */,
 				201959F11E82BD2500384818 /* LaunchScreen.storyboard */,
@@ -65,6 +91,40 @@
 				201959EC1E82BD2500384818 /* CoreDataPractice.xcdatamodeld */,
 			);
 			path = CoreDataPractice;
+			sourceTree = "<group>";
+		};
+		20195A1C1E82C83A00384818 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20195A1D1E82C85900384818 /* MaterialView.swift */,
+				20195A1F1E82CA1800384818 /* ItemCell.swift */,
+				20195A4E1E82DF6000384818 /* CustomTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		20195A251E82D69E00384818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20195A3A1E82D92100384818 /* Image+CoreDataClass.swift */,
+				20195A3B1E82D92100384818 /* Image+CoreDataProperties.swift */,
+				20195A3C1E82D92100384818 /* Store+CoreDataClass.swift */,
+				20195A3D1E82D92100384818 /* Store+CoreDataProperties.swift */,
+				20195A3E1E82D92100384818 /* ItemType+CoreDataClass.swift */,
+				20195A3F1E82D92100384818 /* ItemType+CoreDataProperties.swift */,
+				20195A401E82D92100384818 /* Item+CoreDataClass.swift */,
+				20195A411E82D92100384818 /* Item+CoreDataProperties.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		20195A4A1E82DCA900384818 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20195A4B1E82DCC500384818 /* ItemDetailsVC.swift */,
+				201959E71E82BD2500384818 /* MainVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +160,7 @@
 					201959E11E82BD2400384818 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 94BQ9T6DER;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,9 +201,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201959E81E82BD2500384818 /* ViewController.swift in Sources */,
+				201959E81E82BD2500384818 /* MainVC.swift in Sources */,
 				201959EE1E82BD2500384818 /* CoreDataPractice.xcdatamodeld in Sources */,
+				20195A461E82D92100384818 /* ItemType+CoreDataClass.swift in Sources */,
 				201959E61E82BD2500384818 /* AppDelegate.swift in Sources */,
+				20195A421E82D92100384818 /* Image+CoreDataClass.swift in Sources */,
+				20195A491E82D92100384818 /* Item+CoreDataProperties.swift in Sources */,
+				20195A451E82D92100384818 /* Store+CoreDataProperties.swift in Sources */,
+				20195A481E82D92100384818 /* Item+CoreDataClass.swift in Sources */,
+				20195A4C1E82DCC500384818 /* ItemDetailsVC.swift in Sources */,
+				20195A1E1E82C85900384818 /* MaterialView.swift in Sources */,
+				20195A471E82D92100384818 /* ItemType+CoreDataProperties.swift in Sources */,
+				20195A441E82D92100384818 /* Store+CoreDataClass.swift in Sources */,
+				20195A201E82CA1800384818 /* ItemCell.swift in Sources */,
+				20195A431E82D92100384818 /* Image+CoreDataProperties.swift in Sources */,
+				20195A4F1E82DF6000384818 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
