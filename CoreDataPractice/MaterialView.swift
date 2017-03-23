@@ -10,6 +10,21 @@ import UIKit
 
 private var materialKey = false
 
+class materialView: UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.masksToBounds = false
+        layer.cornerRadius = 5.0
+        layer.shadowOpacity = 0.75
+        layer.shadowRadius = 3.0
+        layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        layer.shadowColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1.0).cgColor
+        
+    }
+    
+}
+
 extension UIView {
     @IBInspectable var materialDesign: Bool {
         get {

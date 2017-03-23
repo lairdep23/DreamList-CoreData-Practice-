@@ -59,6 +59,24 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let objs = controller.fetchedObjects , objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "showDetailSegue", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailSegue" {
+            if let destination = segue.destination as? ItemDetailsVC {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     func configureCell(cell: ItemCell, indexPath: NSIndexPath) {
         
         let item = controller.object(at: indexPath as IndexPath)
@@ -66,14 +84,34 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
+    @IBAction func segmentedControl(_ sender: Any) {
+        attemptToFetch()
+        itemTableView.reloadData()
+    }
+    
     func attemptToFetch() {
         
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
-        fetchRequest.sortDescriptors = [dateSort]
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        
+        if segment.selectedSegmentIndex == 0 {
+            
+            fetchRequest.sortDescriptors = [dateSort]
+            
+        } else if segment.selectedSegmentIndex == 1 {
+            
+            fetchRequest.sortDescriptors = [priceSort]
+            
+        } else {
+            
+            fetchRequest.sortDescriptors = [titleSort]
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        controller.delegate = self
         self.controller = controller
         
         do {

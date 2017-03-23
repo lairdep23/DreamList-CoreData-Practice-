@@ -33,20 +33,23 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="epW-Yd-ybb"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pVW-pf-8QM">
                                 <rect key="frame" x="16" y="108" width="343" height="559"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="EE5-Nh-hxq" customClass="ItemCell" customModule="CoreDataPractice" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="EE5-Nh-hxq" customClass="ItemCell" customModule="CoreDataPractice" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EE5-Nh-hxq" id="L5b-9e-yXp">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-Uc-iPc">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-Uc-iPc" customClass="materialView" customModule="CoreDataPractice" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="327" height="134"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rqu-Ac-b30">
@@ -176,6 +179,9 @@
                                     <constraint firstAttribute="height" constant="88" id="aJb-fj-QXY"/>
                                     <constraint firstAttribute="width" constant="88" id="veJ-5W-jDt"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="imageBtn:" destination="rtx-Cs-XNA" eventType="touchUpInside" id="VLX-oc-hbC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-hO-8Pj" customClass="CustomTextField" customModule="CoreDataPractice" customModuleProvider="target">
                                 <rect key="frame" x="112" y="80" width="247" height="40"/>
@@ -225,6 +231,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveItemBtn:" destination="rtx-Cs-XNA" eventType="touchUpInside" id="AIb-Jv-uoe"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VR0-16-xUX">
                                 <rect key="frame" x="0.0" y="325" width="375" height="284"/>
@@ -259,8 +268,18 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="f8v-y7-h2r">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="iZE-qf-kBC">
                             <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteBtn:" destination="rtx-Cs-XNA" id="mvj-TF-gNj"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descField" destination="RnI-YW-jkv" id="2RI-B8-rBd"/>
+                        <outlet property="imageSelected" destination="93i-SA-gdn" id="fkL-WH-mMC"/>
+                        <outlet property="pickerView" destination="VR0-16-xUX" id="fHr-TE-ezk"/>
+                        <outlet property="priceField" destination="cqP-kn-ocG" id="9Mg-ok-gBB"/>
+                        <outlet property="titleField" destination="oy6-hO-8Pj" id="3rx-Eu-9l3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rga-G0-9ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -271,7 +290,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iRH-xU-gNE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MKc-f8-Jwz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MKc-f8-Jwz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
@@ -294,6 +313,6 @@
         <image name="camera_icon_snap" width="29" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Od2-IJ-zLA"/>
+        <segue reference="wa2-Cs-DbO"/>
     </inferredMetricsTieBreakers>
 </document>
